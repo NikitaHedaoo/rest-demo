@@ -9,7 +9,7 @@ public class CloudVendor {
 	
 
 	public CloudVendor() {
-		
+		super();
 	}
 
 	public CloudVendor(String vendorId, String vendorName, String vendorAddress,
