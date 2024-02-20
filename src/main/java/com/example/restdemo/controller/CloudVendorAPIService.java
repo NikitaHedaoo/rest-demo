@@ -49,14 +49,14 @@ public class CloudVendorAPIService {
 	}
 	
 	@PutMapping
-	public String updateCloudVendor(@RequestBody CloudVendor cloudVendor) {
+	public String updateCloudVendorDetails(@RequestBody CloudVendor cloudVendor) {
 		this.cloudVendor = cloudVendor;
 		log.info("Cloud Vendor "+ cloudVendor.getvendorId() + " updated sccessfully");
 		return "Cloud Vendor updated successfully";
 	}
 
 	@DeleteMapping("{vendorId}")
-	public String deleteCloudVendor(String vendorId) {
+	public String deleteCloudVendorDetails(String vendorId) {
 		this.cloudVendor = null ;
 		log.info("Cloud vendor deleted successfully");
 		return "Cloud vendor deleted successfully";
