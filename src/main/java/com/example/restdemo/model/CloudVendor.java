@@ -1,8 +1,16 @@
 package com.example.restdemo.model;
 
+import jakarta.persistence.Entity; //Here in my case, I tried to import javax.persistence, but It shows, It doesn’t exist. So I found the following solution. I hope. It will help in your case as well. The main reason for this problem is the replacement of javax with jakarta. Therefore the solution is to add the following dependency to your pom.xml.
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+
+@Entity
+@Table(name="cloud_vendor_info") //if nothing specified then table with class name will be created
 public class CloudVendor {
 	
-	private String vendorId;
+	@Id
+	private String vendorId;  // In DB, we should find columns like vendor_id
 	private String vendorName;
 	private String vendorAddress;
 	private String vendorPhoneNumber;
