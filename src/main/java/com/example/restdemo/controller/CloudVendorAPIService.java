@@ -13,7 +13,7 @@ import com.example.restdemo.model.CloudVendor;
 import lombok.extern.java.Log;
 
 
-// @RestController : to tell Spring that this is our Rest controller class responsible to expose all th Rest APIs
+// @RestController : to tell Spring that this is our Rest controller class
 // @RequestMapping : to map context path as /cloudvendor
 @Log
 @RestController
