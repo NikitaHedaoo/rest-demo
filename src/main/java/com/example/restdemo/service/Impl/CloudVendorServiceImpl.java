@@ -2,10 +2,13 @@ package com.example.restdemo.service.Impl;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.example.restdemo.model.CloudVendor;
 import com.example.restdemo.repository.CloudVendorRepository;
 import com.example.restdemo.service.CloudVendorService;
 
+@Service
 public class CloudVendorServiceImpl implements CloudVendorService {
 	
 	//we need this instance because repository is a layer which is actually talking to db
