@@ -2,6 +2,7 @@ package com.example.restdemo.service.Impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.restdemo.model.CloudVendor;
@@ -12,12 +13,13 @@ import com.example.restdemo.service.CloudVendorService;
 public class CloudVendorServiceImpl implements CloudVendorService {
 	
 	//we need this instance because repository is a layer which is actually talking to db
-	CloudVendorRepository cloudVendorRepository;
+	@Autowired
+	private CloudVendorRepository cloudVendorRepository;
 
-	//Autowiring using constructor
-	public CloudVendorServiceImpl(CloudVendorRepository cloudVendorRepository) {
-		this.cloudVendorRepository = cloudVendorRepository;
-	}
+	//Dependency injection using constructor
+//	public CloudVendorServiceImpl(CloudVendorRepository cloudVendorRepository) {
+//		this.cloudVendorRepository = cloudVendorRepository;
+//	}
 	
 	@Override
 	public String createCloudVendor(CloudVendor cloudVendor) {
@@ -49,7 +51,7 @@ public class CloudVendorServiceImpl implements CloudVendorService {
 	}
 
 	@Override
-	public List<CloudVendor> getAllCloudVendor() {
+	public List<CloudVendor> getAllCloudVendors() {
 		//More business logic
 		List<CloudVendor> cloudVendorList = cloudVendorRepository.findAll();
 		return cloudVendorList;

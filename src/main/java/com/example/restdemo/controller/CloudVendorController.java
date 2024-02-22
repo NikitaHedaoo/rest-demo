@@ -53,7 +53,7 @@ public class CloudVendorController {
 	// Read all cloud vendor details from DB
 	@GetMapping()
 	public List<CloudVendor> getAllCloudVendorDetails(@PathVariable("vendorId")String vendorId) {
-		return cloudVendorService.getAllCloudVendor();
+		return cloudVendorService.getAllCloudVendors();
 	}
 	
 	@PostMapping

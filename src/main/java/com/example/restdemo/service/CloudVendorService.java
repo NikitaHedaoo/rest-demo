@@ -1,7 +1,6 @@
 package com.example.restdemo.service;
 
 import java.util.List;
-
 import com.example.restdemo.model.CloudVendor;
 
 public interface CloudVendorService {
@@ -12,5 +11,5 @@ public interface CloudVendorService {
 	public String updateCloudVendor(CloudVendor cloudVendor);
 	public String deleteCloudVendor(String cloudVendorId);
 	public CloudVendor getCloudVendor(String cloudVendorId);
-	public List<CloudVendor> getAllCloudVendor();
+	public List<CloudVendor> getAllCloudVendors();
 }

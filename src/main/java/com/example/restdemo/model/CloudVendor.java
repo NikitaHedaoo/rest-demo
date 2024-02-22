@@ -4,7 +4,6 @@ import jakarta.persistence.Entity; //Here in my case, I tried to import javax.pe
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-
 @Entity
 @Table(name="cloud_vendor_info") //if nothing specified then table with class name will be created
 public class CloudVendor {
@@ -17,7 +16,6 @@ public class CloudVendor {
 	
 
 	public CloudVendor() {
-		super();
 	}
 
 	public CloudVendor(String vendorId, String vendorName, String vendorAddress,
